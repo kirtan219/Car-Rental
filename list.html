@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Rental</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+        .w3-bar-block .w3-bar-item {padding:20px}
+    </style>
+</head>
+<body>
+
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <h2 class="w3-center">Available Cars</h2>
+    </div>
+</div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="cars">
+        <div class="w3-col s3">
+            <img src="images/Car1.png" alt="Car 1" style="width:100%">
+            <h3>Mercedes AMG</h3>
+            <p>1,000 INR Per Hour</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="location.href='thanks.html'">Book Now</button>
+        </div>
+        <!-- More cars here -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="showCars(1)">1</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="showCars(2)">2</a>
+            <!-- Add more pagination links here if needed -->
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <hr id="about">
+    <div class="w3-container w3-padding-32 w3-center">  
+        <h3>About Us</h3>
+        <img src="kirtan.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+        <div class="w3-padding-32">
+            <h4><b>We are</b></h4>
+            <h6><i>Passionate about cars</i></h6>
+            <p>Explore boundless adventures with our premier car rental service. We're here to fuel your journey with top-notch vehicles and seamless experiences. Book now and let's hit the road together!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-row-padding w3-padding-32">
+        <div class="w3-third">
+            <h3>FOOTER</h3>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae</p>
+        </div>
+        <div class="w3-third">
+            <h3>CONTACT</h3>
+            <p>Phone: +1234567890</p>
+            <p>Email: info@carrental.com</p>
+        </div>
+        <div class="w3-third">
+            <h3>FOLLOW US</h3>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    function showCars(page) {
+        var start = (page - 1) * 8;
+        var end = start + 8;
+        var cars = document.getElementsByClassName("w3-col");
+        
+        for (var i = 0; i < cars.length; i++) {
+            if (i >= start && i < end) {
+                cars[i].style.display = "block";
+            } else {
+                cars[i].style.display = "none";
+            }
+        }
+        
+        var pageLinks = document.getElementsByClassName("w3-bar-item");
+        for (var i = 0; i < pageLinks.length; i++) {
+            pageLinks[i].className = "w3-bar-item w3-button w3-hover-black";
+        }
+        pageLinks[page - 1].className = "w3-bar-item w3-button w3-black";
+    }
+    showCars(1);
+</script>
+
+</body>
+</html>
