@@ -40,13 +40,6 @@
       }
     ],
     "meta-viewport": "off",
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "width: fit-content"
-        ]
-      }
-    ]
+    "compat-api/css": "off"
   }
 }

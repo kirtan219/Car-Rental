@@ -260,12 +260,12 @@ select {
   word-wrap: normal;
 }
 
-button,
+/* button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
-}
+  -webkit-appearance: none;
+} */
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -288,12 +288,12 @@ input[type="checkbox"] {
   padding: 0;
 }
 
-input[type="date"],
+/* input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox;
-}
+} */
 
 textarea {
   overflow: auto;
@@ -328,14 +328,14 @@ progress {
   height: auto;
 }
 
-[type="search"] {
+/* [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
+} */
 
 ::-webkit-file-upload-button {
   font: inherit;
@@ -3765,7 +3765,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   -moz-appearance: none;
   appearance: none;
 }
@@ -3884,7 +3884,7 @@ input[type="button"].btn-block {
   height: calc(1rem + 0.4rem);
   padding: 0;
   background-color: transparent;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   -moz-appearance: none;
   appearance: none;
 }
@@ -3917,7 +3917,7 @@ input[type="button"].btn-block {
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   appearance: none;
 }
 
@@ -5660,7 +5660,7 @@ button.close {
   padding: 0;
   background-color: transparent;
   border: 0;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   -moz-appearance: none;
   appearance: none;
 }
