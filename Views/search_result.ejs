@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        <% rentals.forEach(rental => { %>
+            <li>
+                Pickup Location: <%= rental.pickup_location %><br>
+                Drop Location: <%= rental.drop_location %><br>
+                Pickup Date: <%= rental.pickup_date %><br>
+                Return Date: <%= rental.return_date %><br>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
